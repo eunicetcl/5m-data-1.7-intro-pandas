@@ -16,6 +16,8 @@ Answer:
 
 ```python
 
+dft.select_dtypes(include=['number'], exclude=['float'])
+
 ```
 
 ### Question 2
@@ -25,6 +27,8 @@ Question: How do you return the last 3 rows of a DataFrame `df`?
 Answer:
 
 ```python
+
+df.tail(3)
 
 ```
 
@@ -36,6 +40,8 @@ Answer:
 
 ```python
 
+pd.Series([x.min(), x.max()], index=["min", "max"])
+
 ```
 
 ### Question 4
@@ -46,6 +52,8 @@ Answer:
 
 ```python
 
+df1.mul(df2, fill_value=1)
+
 ```
 
 ### Question 5
@@ -54,12 +62,15 @@ Question: How do you create a DataFrame from a nested dictionary of dictionaries
 
 ```python
 nested_dict = {'A': {'a': 1, 'b': 2}, 'B': {'a': 3, 'b': 4}}
+
 ```
 
 Answer:
 
 ```python
-
+nested_dict = {'A': {'a': 1, 'b': 2}, 'B': {'a': 3, 'b': 4}}
+df = pd.DataFrame(nested_dict)
+print(df)
 ```
 
 ## Submission
